@@ -1,0 +1,31 @@
+.detail-container {
+    color: var(--front-color);
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    padding-top: calc(var(--padding) / 2);
+}
+
+.back {
+    display: flex;
+    width: fit-content;
+    background-color: var(--elements-color);
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1.8rem;
+    user-select: none;
+    box-shadow: var(--box-shadow);
+}
+
+.back:hover {
+    cursor: pointer;
+}
+
+.back-icon {
+    width: 1rem;
+    height: auto;
+    margin-right: 1rem;
+}
+
+@media (min-width: 900px){
+    
+}

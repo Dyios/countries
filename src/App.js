@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import {useEffect, useState} from 'react'
 import './App.css';
+import { getCountries } from './API/countries';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from './components/header/Header';
+import Home from './components/home/Home';
+import Detail from './components/detail/Detail';
 
 function App() {
+  const [cachedData, setCachedData] = useState();
+  const [theme, setTheme] = useState(window.localStorage.getItem("theme") ?? "Dark");
+
+  useEffect(()=>{
+    getCountries(setCachedData);
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className={`App ${theme}`}>
+        <Header theme={theme} setTheme={setTheme} />
+        <Switch>
+          <Route path="/" exact>
+            <Home data={cachedData} />
+          </Route>
+          <Route path="/:country" exact>
+            <Detail data={cachedData} />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

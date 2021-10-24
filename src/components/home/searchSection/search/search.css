@@ -1,0 +1,35 @@
+.search-container {
+    display: flex;
+    background-color: var(--elements-color);
+    color: var(--front-color);
+    padding: 0 var(--search-padding);
+    border-radius: var(--border-radius);
+    min-width: 40%;
+    box-shadow: var(--box-shadow);
+}
+
+.search-container > * {
+    padding: var(--search-padding);
+}
+
+.search-icon {
+    width: 18px;
+    height: auto;
+    box-sizing: content-box;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    background-color: inherit;
+    font-size: inherit;
+    color: var(--front-color);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: var(--front-color);
+}

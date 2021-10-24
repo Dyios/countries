@@ -1,0 +1,42 @@
+.country-container {
+    width: auto;
+    background-color: var(--elements-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.country-container:hover {
+    cursor: pointer;
+}
+
+.flag {
+    width: 100%;
+    height: 180px;
+}
+
+.country-infos {
+    margin: calc(var(--search-padding) * 1.3);
+    color: var(--front-color);
+}
+
+.country-infos > *:not(:first-child) {
+    margin-bottom: 0.3rem;
+}
+
+.country-infos > *:not(:first-child) > span {
+    color: var(--detail-color);
+}
+
+.name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1.4rem;
+}
+
+@media (min-width: 900px){
+    .flag {
+        width: 100%;
+        height: 150px;
+    }
+}

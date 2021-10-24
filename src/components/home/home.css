@@ -1,0 +1,9 @@
+.body-container {
+    padding: 1rem var(--padding);
+}
+
+@media (min-width: 900px){
+    .body-container {
+        padding: 3rem var(--padding);
+    }
+}

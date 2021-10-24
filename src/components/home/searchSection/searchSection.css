@@ -1,0 +1,21 @@
+.searchSection-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+.searchSection-container > *:not(:first-child){
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 900px){
+    .searchSection-container {
+        flex-direction: row;
+    }
+
+    .searchSection-container > *:not(:first-child){
+        margin-top: 0;
+    }
+}

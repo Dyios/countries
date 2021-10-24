@@ -1,0 +1,12 @@
+.resultSection-countainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+@media (min-width: 900px){
+    .resultSection-countainer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
