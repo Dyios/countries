@@ -1,18 +1,13 @@
-# COUNTRIES REACT APP with color theme switcher solution and REST Countries API
+# COUNTRIES REACT APP with color theme switcher and REST Countries API
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+  - [Api used](#api-used)
 
 ## Overview
 

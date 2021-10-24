@@ -15,7 +15,7 @@ function Header({ theme, setTheme }) {
 
     return (
         <header className="header">
-            <div className="header-left" onClick={()=>{history.push("/")}}>
+            <div className="header-left" onClick={()=>{history.push("/countries/")}}>
                 <p>Where in the world?</p>
             </div>
             <div className="header-right" onClick={handleThemeChange}>

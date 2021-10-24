@@ -5,7 +5,7 @@ function BorderItem({country}) {
     let history = useHistory()
 
     function handleClick(){
-        history.push(`/${country.name.common}`,{country: country})
+        history.push(`${country.name.common}`,{country: country})
     }
     
     return (

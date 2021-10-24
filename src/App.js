@@ -19,10 +19,10 @@ function App() {
       <div className={`App ${theme}`}>
         <Header theme={theme} setTheme={setTheme} />
         <Switch>
-          <Route path="/" exact>
+          <Route path={["/", "/countries"]} exact>
             <Home data={cachedData} />
           </Route>
-          <Route path="/:country" exact>
+          <Route path={["/country/:country", "/countries/country/:country"]} >
             <Detail data={cachedData} />
           </Route>
         </Switch>
