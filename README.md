@@ -17,7 +17,7 @@ Users Can:
 
 - See all countries from the API on the homepage.
 - Search for a country using a search field.
-- Filter countries by region.
+- Filter countries by region, reselect the region to cancel the filter.
 - Click on a country to see more detailed information on a separate page.
 - Click through to the border countries on the detail page.
 - Toggle the color scheme between light and dark mode (dark is the default), the scheme is stored for future visit using localStorage.
