@@ -1,10 +1,10 @@
 import React from 'react'
 import "./details.css"
-import { useLocation } from "react-router-dom"
 import BorderItem from './borderItem/BorderItem';
 
-function Details({countries}) {
-    const { country } = useLocation().state; console.log(country)
+function Details({countries, country}) {
+
+    console.log(country);
     // react router don't auto scroll to top
     window.scrollTo(0,0);
     // native name string generation & multiple names handle
@@ -18,12 +18,7 @@ function Details({countries}) {
 
     // domain string
     let domains = Object.values(country.tld);
-    let domain = domains[0]
-    if (domains.length > 1) {
-        for (let i = 1; i < domains.length; i++) {
-            domain += `, ${domains[i]}`;
-        }
-    }
+    let domain = domains.join(", ");
 
     // Currencie string generation & multiple currencies handle
     let currencies = Object.values(country.currencies);
@@ -36,12 +31,7 @@ function Details({countries}) {
 
     // Language string
     let languages = Object.values(country.languages);
-    let language = languages[0]
-    if (languages.length > 1) {
-        for (let i = 1; i < languages.length; i++) {
-            language += `, ${languages[i]}`;
-        }
-    }
+    let language = languages.join(", ")
 
     // get country from it's code
     function getCountry(code){
