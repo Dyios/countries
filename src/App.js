@@ -23,11 +23,10 @@ function App() {
             <Home data={cachedData} />
           </Route>
           {
-            cachedData && cachedData.map(country =>
-              <Route path={`/${country.name.common}`} exact key={country.name.common}>
-                <Detail data={cachedData} country={country} />
-              </Route>
-            )
+            cachedData &&
+            <Route exact path={"/:country"}>
+              <Detail data={cachedData} />
+            </Route>
           }
         </Switch>
       </div>

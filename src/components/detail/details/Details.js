@@ -1,9 +1,10 @@
 import React from 'react'
 import "./details.css"
 import BorderItem from './borderItem/BorderItem';
+import { useParams } from 'react-router';
 
-function Details({countries, country}) {
-
+function Details({countries}) {
+    const country = findCountryByName(useParams().country);
     console.log(country);
     // react router don't auto scroll to top
     window.scrollTo(0,0);
@@ -32,6 +33,11 @@ function Details({countries, country}) {
     // Language string
     let languages = Object.values(country.languages);
     let language = languages.join(", ")
+
+    function findCountryByName(countryName){
+        let i = countries.findIndex(country => country.name.common === countryName);
+        return countries[i];
+    }
 
     // get country from it's code
     function getCountry(code){
@@ -64,7 +70,7 @@ function Details({countries, country}) {
                     <p>Border Countries: &nbsp;</p>
                     {
                         country.borders?.length > 0 ?
-                        country.borders?.map((country) =>{
+                        country.borders.map((country) =>{
                             return <BorderItem country={getCountry(country)} />
                         }):
                         <p className="no-borders">No country</p>

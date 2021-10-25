@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 function Country({ country }) {
 
     return (
-        <Link to={`/${country.name.common}`}>
+        <Link to={`/${country.name.common}`} style={{textDecoration:"none"}}>
             <div className="country-container">
                 <img className="flag" src={country.flags.png} alt={`${country.name.common} flag`} />
                 <div className="country-infos">
